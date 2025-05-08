@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Music } from 'lucide-react';
 import { handleAuthCallback } from '../store/slices/authSlice';
 import { RootState, AppDispatch } from '../store/store';
-
-const history = useHistory();
-history.push('/your-path'); // instead of navigate('/your-path')
 
 const CallbackPage: React.FC = () => {
   const navigate = useNavigate();
